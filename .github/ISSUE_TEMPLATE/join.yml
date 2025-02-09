@@ -1,0 +1,51 @@
+name: 加入 OpenBMCLAPI 大学 🎓 (Join OpenBMCLAPI University)
+description: 填写此表格以加入 OpenBMCLAPI 大学 📝 (Fill out this form to join OpenBMCLAPI University)
+title: "[JOIN] 申请加入 OpenBMCLAPI 大学 🏫 (Apply to Join OpenBMCLAPI University)"
+labels: ["join", "application"]
+assignees: ["Daiyangcheng"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 个人信息 🧑‍🎓 (Personal Information)
+
+  - type: input
+    id: email
+    attributes:
+      label: 电子邮件地址 📧 (Email Address)
+      description: 请输入您的电子邮件地址 (Please enter your email address)
+      placeholder: john.doe@example.com
+    validations:
+      required: true
+      pattern: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub 用户名 👤 (GitHub Username)
+      description: 请输入您的 GitHub 用户名 (Please enter your GitHub username)
+      placeholder: johndoe
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason_for_joining
+    attributes:
+      label: 加入原因 💬 (Reason for Joining)
+      description: 请简要说明您想加入 OpenBMCLAPI 大学的原因 (Please briefly explain why you want to join OpenBMCLAPI University)
+      placeholder: 我对贡献 OpenBMCLAPI 感兴趣，因为... (I am interested in contributing to OpenBMCLAPI because...)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience_level
+    attributes:
+      label: 经验水平 🛠️ (Experience Level)
+      description: 请选择您的编程经验水平 (Please select your experience level in programming)
+      options:
+        - 初学者 (Beginner) 🌱
+        - 中级 (Intermediate) 🌿
+        - 高级 (Advanced) 🌳
+    validations:
+      required: true
